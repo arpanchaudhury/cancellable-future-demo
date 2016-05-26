@@ -1,3 +1,5 @@
+import sbt.Keys._
+
 scalaVersion in Global := "2.10.4"
 
 logLevel := Level.Info
@@ -24,8 +26,10 @@ javaOptions ++= Seq(
   "-Duser.language=en-US"
 )
 
-val demo = project.in(file("."))
-           .settings(
-             name := "demo",
+val cancellable_future = project.in(file("."))
+            .enablePlugins(PlayScala)
+            .settings(
+             name := "cancellable_future",
+             version := "1.0.0",
              scalaVersion := "2.11.7"
            )

@@ -1,0 +1,5 @@
+# Application Routes
+
+GET             /normal-future                  @controllers.ApplicationController.normalFuture
+
+GET             /cancellable-future             @controllers.ApplicationController.cancellableFuture
